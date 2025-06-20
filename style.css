@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Roboto, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #c4c6c6;
+}
+
+.header {
+    padding: 2rem;
+    background-color: #f5f7f7;
+    text-align: center;
+    box-shadow: 0 2px 2px 1px rgb(208 208 208);
+}
