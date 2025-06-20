@@ -17,3 +17,23 @@ body {
     text-align: center;
     box-shadow: 0 2px 2px 1px rgb(208 208 208);
 }
+
+.add-button {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-button button {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 2rem;
+    border-color: transparent;
+}
+.add-button button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
