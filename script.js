@@ -78,3 +78,11 @@ function removeBookById(id) {
     const bookCard = document.querySelector(`.book-card[data-id="${id}"]`);
     if (bookCard) bookCard.remove();
 }
+
+function addTempBookCard() {
+    const book = new Book('C++ How To Program', 'Deitel & Deitel', 1080, true);
+    books.push(book);
+    createBookCard(book);
+}
+
+addTempBookCard();
