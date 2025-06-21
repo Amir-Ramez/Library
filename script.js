@@ -53,8 +53,8 @@ function createBookCard(book) {
         <p>By: ${book.author}</p>
         <p>Pages: ${book.pages}</p>
         <label for="read-${book.id}">
-            <input type="checkbox" id="read-${book.id}" ${book.read ? 'checked' : ''}>
             Read the book?
+            <input type="checkbox" id="read-${book.id}" ${book.read ? 'checked' : ''}>
         </label>
         <button type="button" class="remove-button">Remove</button>
     `;
