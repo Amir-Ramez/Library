@@ -62,3 +62,19 @@ function createBookCard(book) {
     document.querySelector('.book-container').append(bookCard);
     return bookCard;
 }
+
+document.querySelector('.book-container').addEventListener('click', (event) => {
+    if (event.target.classList.contains('remove-button')) {
+        const bookCard = event.target.closest('.book-card');
+        const id = bookCard.dataset.id;
+        removeBookById(id);
+    }
+});
+
+function removeBookById(id) {
+    const index = books.findIndex((book) => book.id === id);
+    if (index != -1) books.splice(index, 1);
+
+    const bookCard = document.querySelector(`.book-card[data-id="${id}"]`);
+    if (bookCard) bookCard.remove();
+}
