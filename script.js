@@ -1,12 +1,54 @@
-function Book(name, author, pages, read) {
-    if (!new.target)
-        throw Error("You must use the 'new' keyword to call the constructor.");
+class Book {
+    #name;
+    #author;
+    #pages;
+    #read;
+    #id;
 
-    this.name = name;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.id = crypto.randomUUID();
+    constructor(name, author, pages, read) {
+        this.#name = name;
+        this.#author = author;
+        this.#pages = pages;
+        this.#read = read;
+        this.#id = crypto.randomUUID();
+    }
+
+    // setter and getters
+    get name() {
+        return this.#name;
+    }
+
+    set name(name) {
+        this.#name = name;
+    }
+
+    get author() {
+        return this.#author;
+    }
+
+    set author(author) {
+        this.#author = author;
+    }
+
+    get pages() {
+        return this.#pages;
+    }
+
+    set pages(pages) {
+        this.#pages = pages;
+    }
+
+    get read() {
+        return this.#read;
+    }
+
+    set read(read) {
+        this.#read = read;
+    }
+
+    get id() {
+        return this.#id;
+    }
 }
 
 const books = [];
@@ -31,7 +73,7 @@ submitButton.addEventListener('click', (event) => {
     const book = addNewBook(
         nameInput.value,
         authorInput.value,
-        pagesInput.value,
+        Number(pagesInput.value),
         readInput.checked
     );
     createBookCard(book);
